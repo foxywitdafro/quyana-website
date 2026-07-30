@@ -1,0 +1,140 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 6rem;
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+/* pink spotlight motif, echoing the book cover */
+.hero::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 120vw;
+  height: 90vh;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse 40% 46% at 50% 50%, var(--pink-glow) 0%, rgba(200, 30, 91, 0.08) 42%, transparent 72%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+  padding-left: 0.34em;
+}
+
+.name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(3.6rem, 15vw, 9.5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  color: var(--text-primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 60px rgba(255, 93, 162, 0.25);
+}
+
+.tagline {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: clamp(1.15rem, 3vw, 1.7rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 2.6rem;
+  max-width: 460px;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  padding: 0.8rem 2.1rem;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.ctaPrimary:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.ctaGhost {
+  display: inline-block;
+  padding: 0.8rem 2.1rem;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.ctaGhost:hover {
+  border-color: var(--pink);
+  color: var(--pink);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scrollHint span {
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--pink));
+  margin: 0 auto;
+  animation: fadeDown 2s ease-in-out infinite;
+}
+
+@keyframes fadeDown {
+  0%, 100% { opacity: 0; transform: scaleY(0.5); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 7rem 1.5rem 5rem;
+  }
+}

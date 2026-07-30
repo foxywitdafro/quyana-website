@@ -1,0 +1,103 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Palette: black / white / red / pink */
+  --bg: #0B0B0B;
+  --bg-alt: #131013;
+  --bg-card: #1A171A;
+  --red: #C81E5B;
+  --red-deep: #9A1444;
+  --pink: #FF5DA2;
+  --pink-soft: rgba(255, 93, 162, 0.14);
+  --pink-glow: rgba(255, 93, 162, 0.30);
+  --text-primary: #F5F5F0;
+  --text-secondary: #B8B0B4;
+  --text-muted: #7F787E;
+  --border: rgba(245, 245, 240, 0.12);
+  --border-strong: rgba(245, 245, 240, 0.22);
+  --max-width: 1080px;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', Georgia, serif;
+  line-height: 1.12;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--pink);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--text-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+section {
+  padding: 5.5rem 2rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ornament::before,
+.ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-strong);
+}
+
+.ornament span {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  color: var(--pink);
+  line-height: 1;
+}

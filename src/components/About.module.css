@@ -1,0 +1,85 @@
+.section {
+  background: var(--bg-alt);
+  padding: 5.5rem 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.photoCol {
+  position: sticky;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.frame {
+  position: relative;
+  border-radius: 6px;
+  padding: 0;
+  background: linear-gradient(160deg, rgba(255, 93, 162, 0.5), rgba(200, 30, 91, 0.35));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.textCol {
+  padding-top: 0.5rem;
+}
+
+.heading {
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bio p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 62ch;
+}
+
+.bio em {
+  font-style: italic;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .photoCol {
+    position: static;
+    max-width: none;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .frame {
+    flex: 1;
+    min-width: 0;
+  }
+}

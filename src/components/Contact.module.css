@@ -1,0 +1,136 @@
+.section {
+  background: var(--bg-alt);
+  padding: 5.5rem 2rem;
+}
+
+.inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.subtext {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background: #0F0D0F;
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+  width: 100%;
+  transition: border-color 0.2s ease;
+  outline: none;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--pink);
+}
+
+.field input:disabled,
+.field textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit {
+  align-self: flex-start;
+  padding: 0.8rem 2.4rem;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--red-deep);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  padding: 1.5rem;
+  background: var(--pink-soft);
+  border: 1px solid rgba(255, 93, 162, 0.35);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.successMessage p {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--pink);
+  font-style: italic;
+}
+
+.errorMessage {
+  font-size: 0.875rem;
+  color: #ff8080;
+}
+
+.errorMessage a {
+  color: #ff8080;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

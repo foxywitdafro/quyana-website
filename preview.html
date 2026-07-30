@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quyana — first draft preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0B0B0B;--bg-alt:#131013;--bg-card:#1A171A;--red:#C81E5B;--red-deep:#9A1444;
+    --pink:#FF5DA2;--pink-soft:rgba(255,93,162,.14);--pink-glow:rgba(255,93,162,.30);
+    --text-primary:#F5F5F0;--text-secondary:#B8B0B4;--text-muted:#7F787E;
+    --border:rgba(245,245,240,.12);--border-strong:rgba(245,245,240,.22);--max-width:1080px;
+  }
+  body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text-primary);background:var(--bg);-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.12;font-weight:500;color:var(--text-primary)}
+  a{color:var(--pink);text-decoration:none}
+  img{max-width:100%;display:block}
+  section{padding:5.5rem 2rem}
+  .container{max-width:var(--max-width);margin:0 auto}
+  .section-label{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);font-weight:600;margin-bottom:.9rem}
+  /* nav */
+  .nav{position:sticky;top:0;z-index:100;padding:1rem 2rem;background:rgba(11,11,11,.9);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--border)}
+  .nav .inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+  .wordmark{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--text-primary);letter-spacing:.18em}
+  .navlinks{display:flex;gap:2.5rem}
+  .navlinks a{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary);font-weight:500}
+  /* hero */
+  .hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 2rem 6rem;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;left:50%;top:46%;width:120vw;height:90vh;transform:translate(-50%,-50%);background:radial-gradient(ellipse 40% 46% at 50% 50%,var(--pink-glow) 0%,rgba(200,30,91,.08) 42%,transparent 72%);pointer-events:none}
+  .hero .inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+  .eyebrow{font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;color:var(--pink);font-weight:600;margin-bottom:1.4rem;padding-left:.34em}
+  .heroname{font-family:'Fraunces',serif;font-size:clamp(3.6rem,15vw,9.5rem);font-weight:600;line-height:.95;letter-spacing:.06em;margin-bottom:1.5rem;text-shadow:0 0 60px rgba(255,93,162,.25)}
+  .tagline{font-family:'Fraunces',serif;font-size:clamp(1.15rem,3vw,1.7rem);font-style:italic;color:var(--text-secondary);margin-bottom:2.6rem}
+  .ctarow{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+  .cta-primary{padding:.8rem 2.1rem;background:transparent;border:1px solid var(--border-strong);border-radius:2px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-primary);font-weight:500}
+  .cta-ghost{padding:.8rem 2.1rem;border:1px solid var(--border-strong);border-radius:2px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-primary);font-weight:500}
+  /* books */
+  .h2{font-size:clamp(2.4rem,6vw,4rem);font-weight:500;margin-bottom:3rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem}
+  .card{display:flex;flex-direction:column;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+  .cover{background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(255,93,162,.16),transparent 70%),#0B0B0B;display:flex;align-items:center;justify-content:center;padding:2rem 2rem 1.5rem}
+  .cover img{width:100%;max-width:300px;max-height:420px;object-fit:contain;box-shadow:0 10px 40px rgba(0,0,0,.6);border-radius:2px}
+  .cover-light{background:#fff;padding:1.75rem 1.5rem}
+  .cover-light img{max-width:100%;max-height:300px;box-shadow:none;border-radius:0}
+  .cardbody{padding:1.75rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+  .badge{align-self:flex-start;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);background:transparent;border:1px solid var(--pink);padding:.3rem .7rem;border-radius:2px;font-weight:600}
+  .badge-soon{background:transparent;color:var(--pink);border:1px solid var(--pink)}
+  .booktitle{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:500;line-height:1.15}
+  .booksubtitle{font-family:'Fraunces',serif;font-size:1.02rem;font-style:italic;color:var(--pink);line-height:1.3;margin-top:-.2rem}
+  .synopsis{font-size:.92rem;color:var(--text-secondary);line-height:1.75;flex:1}
+  .buybtn{align-self:flex-start;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--red);padding:.6rem 1.4rem;border-radius:2px;font-weight:600;margin-top:.5rem}
+  /* about */
+  .alt{background:var(--bg-alt)}
+  .aboutgrid{display:grid;grid-template-columns:320px 1fr;gap:5rem;align-items:start}
+  .photocol{display:flex;flex-direction:column;gap:1.1rem}
+  .frame{border-radius:6px;background:linear-gradient(160deg,rgba(255,93,162,.5),rgba(200,30,91,.35));box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .frame img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.06)}
+  .bio p{font-size:1rem;color:var(--text-secondary);line-height:1.9;max-width:62ch;margin-bottom:1.25rem}
+  .bio em{font-style:italic;color:var(--text-primary)}
+  /* appearances */
+  .applist{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border)}
+  @media(max-width:720px){.applist{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:460px){.applist{grid-template-columns:1fr}}
+  .wordmark{cursor:pointer}
+  .appitem{display:flex;flex-direction:column;gap:.3rem;padding:1.4rem 1.2rem;border-bottom:1px solid var(--border);border-left:2px solid transparent}
+  .appname{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:500;line-height:1.2}
+  .appdetail{font-size:.82rem;letter-spacing:.04em;color:var(--text-muted);text-transform:uppercase}
+  /* contact */
+  .contactinner{max-width:640px;margin:0 auto}
+  .subtext{font-size:.95rem;color:var(--text-secondary);margin:1rem 0 2.5rem}
+  .field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.25rem}
+  .field label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary);font-weight:600}
+  .field input,.field textarea{font-family:'Inter',sans-serif;font-size:.95rem;color:var(--text-primary);background:#0F0D0F;border:1px solid var(--border-strong);border-radius:2px;padding:.7rem .9rem;width:100%}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+  .submit{padding:.8rem 2.4rem;background:var(--red);color:#fff;border:none;border-radius:2px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  /* footer */
+  footer{border-top:1px solid var(--border);padding:2.5rem 2rem;background:var(--bg)}
+  footer .inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+  .fname{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;letter-spacing:.16em}
+  .socials{display:flex;gap:1.75rem}
+  .socials a{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-secondary);font-weight:500}
+  .copy{font-size:.8rem;color:var(--text-muted)}
+  .banner{background:var(--pink-soft);border-bottom:1px solid rgba(255,93,162,.3);color:var(--pink);text-align:center;padding:.6rem 1rem;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+  @media(max-width:768px){.aboutgrid{grid-template-columns:1fr;gap:2.5rem}.photocol{flex-direction:row;gap:1rem}.frame{flex:1;min-width:0}.navlinks{display:none}}
+  @media(max-width:480px){.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <div class="banner">Static preview of the first draft — the contact form is live only in the real build</div>
+
+  <header class="nav"><div class="inner">
+    <span class="wordmark" onclick="window.scrollTo({top:0,behavior:'smooth'})">QUYANA</span>
+    <nav class="navlinks"><a href="#books">Books</a><a href="#about">About</a><a href="#appearances">Appearances</a><a href="#contact">Contact</a></nav>
+  </div></header>
+
+  <section class="hero" id="top"><div class="inner">
+    <p class="eyebrow">Author&nbsp;·&nbsp;Performer</p>
+    <h1 class="heroname">QUYANA</h1>
+    <p class="tagline">from the stage to the page</p>
+    <div class="ctarow"><a class="cta-primary" href="#books">Read the book</a><a class="cta-ghost" href="#about">Her story</a></div>
+  </div></section>
+
+  <section id="books"><div class="container">
+    <p class="section-label">The books</p>
+    <h2 class="h2">by Quyana</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="cover cover-light"><img src="public/covers/not-just-a-trick-cover.jpg" alt="Cover of Not Just a Trick by Quyana" /></div>
+        <div class="cardbody">
+          <span class="badge">Available now</span>
+          <h3 class="booktitle">Not Just a Trick</h3>
+          <p class="booksubtitle">Finding Confidence Beyond the Stage</p>
+          <p class="synopsis">Quyana’s guide for dancers who battle imposter syndrome — a candid, encouraging playbook for building real confidence, on the pole and off it. Drawn from her own journey from first showcase to championship stages.</p>
+          <a class="buybtn" href="https://www.amazon.com/dp/B0FGVZ7RYH">Buy on Amazon</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><img src="public/covers/love-death-high-heels.svg" alt="Love, Death, & High Heels — cover coming soon" /></div>
+        <div class="cardbody">
+          <span class="badge badge-soon">Coming soon</span>
+          <h3 class="booktitle">Love, Death, &amp; High Heels</h3>
+          <p class="synopsis">Quyana’s next book. Cover reveal and release details coming soon — <a href="#contact">get in touch</a> to be the first to know.</p>
+        </div>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="alt" id="about"><div class="container">
+    <div class="aboutgrid">
+      <div class="photocol">
+        <div class="frame"><img src="public/headshot.jpg" alt="Portrait of Quyana" /></div>
+        <div class="frame"><img src="public/performance.jpg" alt="Quyana performing" /></div>
+      </div>
+      <div>
+        <p class="section-label">From the stage to the page</p>
+        <h2 class="h2">About Quyana</h2>
+        <div class="bio">
+          <p>Quyana is an author and performer based in Minneapolis. Her first book, <em>Not Just a Trick: Finding Confidence Beyond the Stage</em>, distills everything she has learned about beating imposter syndrome and building real confidence into a guide for dancers finding their footing.</p>
+          <p>She came to writing the way she comes to everything — by diving in headfirst. Since her first showcase just a month into training in 2021, Quyana has grown into a dynamic pole artist and model, sharing stages across the country with the likes of <em>Usher</em>, <em>Jeremih</em>, and <em>Steel Panther</em>, and appearing on screen in <em>P-Valley</em>. That life — the nerves, the spotlight, the reinvention — is exactly what she writes about. As an instructor, she keeps a supportive, inclusive space where students build confidence, explore creativity, and move authentically — the same spirit that runs through everything she writes.</p>
+          <p>Now she’s turning the page to her first work of fiction, <em>Love, Death, &amp; High Heels</em>. Keep your eyes on this space — get in touch to be the first to know when it arrives.</p>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="appearances"><div class="container">
+    <p class="section-label">The life behind the books</p>
+    <h2 class="h2">Notable Appearances</h2>
+    <ul class="applist">
+      <li class="appitem"><span class="appname">Usher</span><span class="appdetail">Live show</span></li>
+      <li class="appitem"><span class="appname">Concrete Boys x Lil Yachty</span><span class="appdetail">“Millionaire” — music video</span></li>
+      <li class="appitem"><span class="appname">Jeremih</span><span class="appdetail">Concert</span></li>
+      <li class="appitem"><span class="appname">P-Valley</span><span class="appdetail">Television series</span></li>
+      <li class="appitem"><span class="appname">Steel Panther</span><span class="appdetail">Concert</span></li>
+      <li class="appitem"><span class="appname">Kevin Langue Show</span><span class="appdetail">Episode</span></li>
+      <li class="appitem"><span class="appname">Progeny</span><span class="appdetail">Film</span></li>
+      <li class="appitem"><span class="appname">Pole Masters Playhouse</span><span class="appdetail">Event</span></li>
+      <li class="appitem"><span class="appname">Symmetry Music Festival</span><span class="appdetail">Music festival</span></li>
+    </ul>
+  </div></section>
+
+  <section class="alt" id="contact"><div class="container"><div class="contactinner">
+    <p class="section-label">Say hello</p>
+    <h2 class="h2">Get in touch</h2>
+    <p class="subtext">For readers, event and performance bookings, press, or speaking — drop a note and Quyana will get back to you.</p>
+    <div class="row">
+      <div class="field"><label>Name</label><input type="text" placeholder="Your name" /></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="your@email.com" /></div>
+    </div>
+    <div class="field"><label>Message</label><textarea rows="6" placeholder="What's on your mind?"></textarea></div>
+    <button class="submit">Send message</button>
+  </div></div></section>
+
+  <footer><div class="inner">
+    <span class="fname">QUYANA</span>
+    <nav class="socials"><a href="https://www.instagram.com/_quyana_">Instagram</a><a href="https://www.tiktok.com/@foxywitdafro">TikTok</a><a href="https://www.youtube.com/@Foxywitdafro">YouTube</a></nav>
+    <span class="copy">© 2026</span>
+  </div></footer>
+</body>
+</html>
