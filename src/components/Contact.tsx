@@ -5,7 +5,7 @@ import styles from './Contact.module.css'
 // 1. Quyana creates a free account at https://formspree.io using foxywitdafro@gmail.com
 // 2. Create a new form; set the notification email to foxywitdafro@gmail.com
 // 3. Copy the form ID (looks like "xabc1234") and replace 'YOUR_FORM_ID' below
-const FORMSPREE_ID = 'YOUR_FORM_ID'
+const FORMSPREE_ID = 'mjgndzre'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 

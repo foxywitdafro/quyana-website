@@ -26,20 +26,21 @@ export default function About() {
                 real confidence into a guide for dancers finding their footing.
               </p>
               <p>
-                She came to writing the way she comes to everything &mdash; by diving in
-                headfirst. Since her first showcase just a month into training in 2021,
-                Quyana has grown into a dynamic pole artist and model, sharing stages across
-                the country with the likes of <em>Usher</em>, <em>Jeremih</em>, and{' '}
-                <em>Steel Panther</em>, and appearing on screen in <em>P-Valley</em>. That
-                life &mdash; the nerves, the spotlight, the reinvention &mdash; is exactly
-                what she writes about. As an instructor, she keeps a supportive, inclusive
-                space where students build confidence, explore creativity, and move
-                authentically &mdash; the same spirit that runs through everything she writes.
+                She came to writing the way she comes to everything, by diving in headfirst.
+                Since her first showcase just a month into training in 2021, Quyana has grown
+                into a dynamic pole artist and model, sharing stages across the country with
+                the likes of <em>Usher</em>, <em>Jeremih</em>, and <em>Steel Panther</em>, and
+                appearing on screen in <em>P-Valley</em>. That life is exactly what she writes
+                about: the nerves, the spotlight, the reinvention. As an instructor, she keeps
+                a supportive, inclusive space where students build confidence, explore
+                creativity, and move authentically, the same spirit that runs through
+                everything she writes.
               </p>
               <p>
-                Now she&rsquo;s turning the page to her first work of fiction,{' '}
-                <em>Love, Death, &amp; High Heels</em>. Keep your eyes on this space, or get
-                in touch to be the first to know when it arrives.
+                Now she&rsquo;s turning the page to her first works of fiction:{' '}
+                <em>Love, Death, &amp; High Heels</em>, and <em>Beneath His Smile</em>. Keep
+                your eyes on this space or get in touch to be the first to know when they
+                arrive.
               </p>
             </div>
           </div>

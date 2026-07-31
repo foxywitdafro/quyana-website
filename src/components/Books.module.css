@@ -151,3 +151,69 @@
 .comingCard {
   opacity: 0.96;
 }
+
+/* Featured published book — full-width feature (wide screens) */
+.featured {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.featured:hover {
+  border-color: rgba(255, 93, 162, 0.4);
+  box-shadow: 0 14px 44px rgba(255, 93, 162, 0.12);
+}
+
+.featuredMedia {
+  flex: 1 1 56%;
+  min-height: 360px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.featuredImg {
+  width: 100%;
+  height: 100%;
+  max-height: 340px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.featuredBody {
+  flex: 1 1 44%;
+  padding: 2.75rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  justify-content: center;
+}
+
+/* responsive show/hide: feature on wide, compact card on small */
+.wideOnly {
+  display: flex;
+}
+
+.smallOnly {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .wideOnly {
+    display: none;
+  }
+
+  .smallOnly {
+    display: flex;
+  }
+}

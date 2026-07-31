@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img" aria-label="Beneath His Smile — cover coming soon">
+  <defs>
+    <radialGradient id="spot3" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#E11D2A" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#FF5DA2" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="900" fill="#0B0B0B"/>
+  <rect x="18" y="18" width="564" height="864" fill="none" stroke="#2A2A2A" stroke-width="1.5"/>
+  <ellipse cx="300" cy="380" rx="280" ry="240" fill="url(#spot3)"/>
+  <text x="300" y="150" text-anchor="middle" fill="#8A8288" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600" letter-spacing="8">COMING SOON</text>
+  <text x="300" y="390" text-anchor="middle" fill="#F5F5F0" font-family="Georgia, serif" font-style="italic" font-size="66" font-weight="500">Beneath</text>
+  <text x="300" y="480" text-anchor="middle" fill="#FF5DA2" font-family="Georgia, serif" font-style="italic" font-size="66" font-weight="500">His Smile</text>
+  <text x="300" y="760" text-anchor="middle" fill="#FFFFFF" font-family="'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="12">QUYANA</text>
+  <text x="300" y="810" text-anchor="middle" fill="#8A8288" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" letter-spacing="3">cover reveal to come</text>
+</svg>

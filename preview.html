@@ -53,6 +53,13 @@
   .booksubtitle{font-family:'Fraunces',serif;font-size:1.02rem;font-style:italic;color:var(--pink);line-height:1.3;margin-top:-.2rem}
   .synopsis{font-size:.92rem;color:var(--text-secondary);line-height:1.75;flex:1}
   .buybtn{align-self:flex-start;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--red);padding:.6rem 1.4rem;border-radius:2px;font-weight:600;margin-top:.5rem}
+  .featured{display:flex;flex-direction:row;align-items:stretch;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:2.5rem}
+  .featured-media{flex:1 1 56%;min-height:360px;background:#fff;display:flex;align-items:center;justify-content:center;padding:2rem;overflow:hidden}
+  .featured-media img{width:100%;height:100%;max-height:340px;object-fit:contain;object-position:center;display:block}
+  .featured-body{flex:1 1 44%;padding:2.75rem 2.5rem;display:flex;flex-direction:column;gap:.7rem;justify-content:center}
+  .wide-only{display:flex}
+  .small-only{display:none}
+  @media(max-width:767px){.wide-only{display:none}.small-only{display:flex}}
   /* about */
   .alt{background:var(--bg-alt)}
   .aboutgrid{display:grid;grid-template-columns:320px 1fr;gap:5rem;align-items:start}
@@ -107,23 +114,43 @@
   <section id="books"><div class="container">
     <p class="section-label">The books</p>
     <h2 class="h2">by Quyana</h2>
+    <article class="featured wide-only">
+      <div class="featured-media"><img src="public/covers/not-just-a-trick-cover.jpg" alt="Cover of Not Just a Trick by Quyana" /></div>
+      <div class="featured-body">
+        <span class="badge">Available now</span>
+        <h3 class="booktitle">Not Just a Trick</h3>
+        <p class="booksubtitle">Finding Confidence Beyond the Stage</p>
+        <p class="synopsis">Quyana’s guide for dancers who battle imposter syndrome — a candid, encouraging playbook for building real confidence, on the pole and off it. Drawn from her own journey from first showcase to championship stages.</p>
+        <a class="buybtn" href="https://www.amazon.com/dp/B0FGVZ7RYH">Buy on Amazon</a>
+      </div>
+    </article>
+
+    <article class="card small-only">
+      <div class="cover cover-light"><img src="public/covers/not-just-a-trick-cover.jpg" alt="Cover of Not Just a Trick by Quyana" /></div>
+      <div class="cardbody">
+        <span class="badge">Available now</span>
+        <h3 class="booktitle">Not Just a Trick</h3>
+        <p class="booksubtitle">Finding Confidence Beyond the Stage</p>
+        <p class="synopsis">Quyana’s guide for dancers who battle imposter syndrome — a candid, encouraging playbook for building real confidence, on the pole and off it. Drawn from her own journey from first showcase to championship stages.</p>
+        <a class="buybtn" href="https://www.amazon.com/dp/B0FGVZ7RYH">Buy on Amazon</a>
+      </div>
+    </article>
+
     <div class="grid">
-      <article class="card">
-        <div class="cover cover-light"><img src="public/covers/not-just-a-trick-cover.jpg" alt="Cover of Not Just a Trick by Quyana" /></div>
-        <div class="cardbody">
-          <span class="badge">Available now</span>
-          <h3 class="booktitle">Not Just a Trick</h3>
-          <p class="booksubtitle">Finding Confidence Beyond the Stage</p>
-          <p class="synopsis">Quyana’s guide for dancers who battle imposter syndrome — a candid, encouraging playbook for building real confidence, on the pole and off it. Drawn from her own journey from first showcase to championship stages.</p>
-          <a class="buybtn" href="https://www.amazon.com/dp/B0FGVZ7RYH">Buy on Amazon</a>
-        </div>
-      </article>
       <article class="card">
         <div class="cover"><img src="public/covers/love-death-high-heels.svg" alt="Love, Death, & High Heels — cover coming soon" /></div>
         <div class="cardbody">
           <span class="badge badge-soon">Coming soon</span>
           <h3 class="booktitle">Love, Death, &amp; High Heels</h3>
-          <p class="synopsis">Quyana’s next book. Cover reveal and release details coming soon — <a href="#contact">get in touch</a> to be the first to know.</p>
+          <p class="synopsis">Cover reveal and release details coming soon. <a href="#contact">Get in touch</a> to be the first to know.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cover"><img src="public/covers/beneath-his-smile.svg" alt="Beneath His Smile — cover coming soon" /></div>
+        <div class="cardbody">
+          <span class="badge badge-soon">Coming soon</span>
+          <h3 class="booktitle">Beneath His Smile</h3>
+          <p class="synopsis">Cover reveal and release details coming soon. <a href="#contact">Get in touch</a> to be the first to know.</p>
         </div>
       </article>
     </div>
@@ -140,8 +167,8 @@
         <h2 class="h2">About Quyana</h2>
         <div class="bio">
           <p>Quyana is an author and performer based in Minneapolis. Her first book, <em>Not Just a Trick: Finding Confidence Beyond the Stage</em>, distills everything she has learned about beating imposter syndrome and building real confidence into a guide for dancers finding their footing.</p>
-          <p>She came to writing the way she comes to everything — by diving in headfirst. Since her first showcase just a month into training in 2021, Quyana has grown into a dynamic pole artist and model, sharing stages across the country with the likes of <em>Usher</em>, <em>Jeremih</em>, and <em>Steel Panther</em>, and appearing on screen in <em>P-Valley</em>. That life — the nerves, the spotlight, the reinvention — is exactly what she writes about. As an instructor, she keeps a supportive, inclusive space where students build confidence, explore creativity, and move authentically — the same spirit that runs through everything she writes.</p>
-          <p>Now she’s turning the page to her first work of fiction, <em>Love, Death, &amp; High Heels</em>. Keep your eyes on this space — get in touch to be the first to know when it arrives.</p>
+          <p>She came to writing the way she comes to everything, by diving in headfirst. Since her first showcase just a month into training in 2021, Quyana has grown into a dynamic pole artist and model, sharing stages across the country with the likes of <em>Usher</em>, <em>Jeremih</em>, and <em>Steel Panther</em>, and appearing on screen in <em>P-Valley</em>. That life is exactly what she writes about: the nerves, the spotlight, the reinvention. As an instructor, she keeps a supportive, inclusive space where students build confidence, explore creativity, and move authentically, the same spirit that runs through everything she writes.</p>
+          <p>Now she’s turning the page to her first works of fiction: <em>Love, Death, &amp; High Heels</em>, and <em>Beneath His Smile</em>. Keep your eyes on this space or get in touch to be the first to know when they arrive.</p>
         </div>
       </div>
     </div>
