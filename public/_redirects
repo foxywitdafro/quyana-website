@@ -1,0 +1,8 @@
+# Old Squarespace pages, retired when the site relaunched as author-forward.
+# 301s so previously-indexed URLs resolve cleanly instead of 404ing.
+/services   /   301
+/about      /   301
+/portfolio  /   301
+/buymybook  /   301
+/works      /   301
+/blog       /   301
