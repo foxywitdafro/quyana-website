@@ -6,3 +6,8 @@
 /buymybook  /   301
 /works      /   301
 /blog       /   301
+
+# Catch-all: any other old/unknown path (blog posts, store items, etc.
+# we don't have visibility into without Search Console access) also
+# redirects home instead of 404ing.
+/*   /   301
